@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Child - Autiscope</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            color: #555;
+            margin-bottom: 20px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .submit-btn {
+            font-size: 1.2rem;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 50px;
+            background: #ff758c;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .submit-btn:hover {
+            background: #ff5460;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Register Your Child</h2>
+        <form id="child-form">
+            <input type="text" id="name" placeholder="Child's Name" required>
+            <input type="number" id="age" placeholder="Age" required>
+            <input type="date" id="dob" placeholder="Date of Birth" required>
+            <select id="grade" required>
+                <option value="" disabled selected>Select Grade</option>
+                <option value="Preschool">Preschool</option>
+                <option value="Kindergarten">Kindergarten</option>
+                <option value="Grade 1">Grade 1</option>
+                <option value="Grade 2">Grade 2</option>
+                <option value="Grade 3">Grade 3</option>
+            </select>
+            <button type="button" class="submit-btn" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function submitForm() {
+            // يمكن هنا إضافة أكواد لمعالجة البيانات مثل تخزينها في localStorage
+            window.location.href = "4.html"; // ينقل المستخدم إلى الصفحة التالية
+        }
+    </script>
+</body>
+</html>
+

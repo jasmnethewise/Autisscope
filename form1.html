@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autism Assessment - Part 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            width: 60%;
+            margin: auto;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        h2 {
+            font-size: 2rem;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            background: white;
+            color: black;
+            font-size: 1rem;
+        }
+        button {
+            background: #ff6b81;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #ff4757;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Autism Assessment - Part 1</h2>
+        <form id="form1">
+            <p>1. Does your child avoid eye contact?</p>
+            <select name="q1">
+                <option value="2">Always</option>
+                <option value="1">Sometimes</option>
+                <option value="0">Never</option>
+            </select>
+
+            <p>2. Does your child struggle with changes in routine?</p>
+            <select name="q2">
+                <option value="2">Always</option>
+                <option value="1">Sometimes</option>
+                <option value="0">Never</option>
+            </select>
+
+            <p>3. Does your child have trouble understanding emotions?</p>
+            <select name="q3">
+                <option value="2">Always</option>
+                <option value="1">Sometimes</option>
+                <option value="0">Never</option>
+            </select>
+
+            <p>4. Does your child engage in repetitive behaviors?</p>
+            <select name="q4">
+                <option value="2">Always</option>
+                <option value="1">Sometimes</option>
+                <option value="0">Never</option>
+            </select>
+
+            <p>5. Does your child dislike physical touch?</p>
+            <select name="q5">
+                <option value="2">Always</option>
+                <option value="1">Sometimes</option>
+                <option value="0">Never</option>
+            </select>
+
+            <p>6. Does your child have difficulty making friends?</p>
+            <select name="q6">
+                <option value="2">Always</option>
+                <option value="1">Sometimes</option>
+                <option value="0">Never</option>
+            </select>
+
+            <p>7. Does your child show sensitivity to sounds or lights?</p>
+            <select name="q7">
+                <option value="2">Always</option>
+                <option value="1">Sometimes</option>
+                <option value="0">Never</option>
+            </select>
+
+            <p>8. Does your child use limited facial expressions?</p>
+            <select name="q8">
+                <option value="2">Always</option>
+                <option value="1">Sometimes</option>
+                <option value="0">Never</option>
+            </select>
+
+            <p>9. Does your child struggle with imaginative play?</p>
+            <select name="q9">
+                <option value="2">Always</option>
+                <option value="1">Sometimes</option>
+                <option value="0">Never</option>
+            </select>
+
+            <p>10. Does your child repeat words or phrases frequently?</p>
+            <select name="q10">
+                <option value="2">Always</option>
+                <option value="1">Sometimes</option>
+                <option value="0">Never</option>
+            </select>
+
+            <button type="button" onclick="saveAnswersAndNext()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function saveAnswersAndNext() {
+            let formData = new FormData(document.getElementById("form1"));
+            let answers = {};
+
+            formData.forEach((value, key) => {
+                answers[key] = parseInt(value);
+            });
+
+            localStorage.setItem("assessment1", JSON.stringify(answers));
+            window.location.href = "form2.html";
+        }
+    </script>
+</body>
+</html>

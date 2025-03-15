@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autism FAQ</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #79126a, #dea8be);
+            color: white;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .faq-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            cursor: pointer;
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        .answer {
+            display: none;
+            padding-top: 10px;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+    </style>
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            if (answer.style.display === "none") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+
+        <div class="faq-box" onclick="toggleAnswer('q1')">
+            <h2>1. What is autism?</h2>
+            <p id="q1" class="answer">Autism is a neurodevelopmental disorder characterized by difficulties in social interaction, communication, and repetitive behaviors.</p>
+        </div>
+
+        <div class="faq-box" onclick="toggleAnswer('q2')">
+            <h2>2. What are the early signs of autism?</h2>
+            <p id="q2" class="answer">Early signs include lack of eye contact, delayed speech, repetitive movements, and difficulty understanding emotions.</p>
+        </div>
+
+        <div class="faq-box" onclick="toggleAnswer('q3')">
+            <h2>3. Can autism be cured?</h2>
+            <p id="q3" class="answer">There is no cure for autism, but therapies and interventions can help improve communication and social skills.</p>
+        </div>
+
+        <div class="faq-box" onclick="toggleAnswer('q4')">
+            <h2>4. What causes autism?</h2>
+            <p id="q4" class="answer">The exact cause is unknown, but it is believed to involve a combination of genetic and environmental factors.</p>
+        </div>
+
+        <div class="faq-box" onclick="toggleAnswer('q5')">
+            <h2>5. How is autism diagnosed?</h2>
+            <p id="q5" class="answer">Autism is diagnosed through behavioral assessments, medical history, and standardized tests conducted by specialists.</p>
+        </div>
+
+        <div class="faq-box" onclick="toggleAnswer('q6')">
+            <h2>6. Is autism more common in boys than girls?</h2>
+            <p id="q6" class="answer">Yes, autism is more commonly diagnosed in boys, but it can also affect girls who may show different symptoms.</p>
+        </div>
+
+        <div class="faq-box" onclick="toggleAnswer('q7')">
+            <h2>7. Can a child with autism go to a regular school?</h2>
+            <p id="q7" class="answer">Yes, depending on the severity, some children with autism can attend mainstream schools with support.</p>
+        </div>
+
+        <div class="faq-box" onclick="toggleAnswer('q8')">
+            <h2>8. What therapies help children with autism?</h2>
+            <p id="q8" class="answer">Speech therapy, occupational therapy, and behavioral therapy can help improve skills and development.</p>
+        </div>
+
+        <div class="faq-box" onclick="toggleAnswer('q9')">
+            <h2>9. Do all children with autism have the same symptoms?</h2>
+            <p id="q9" class="answer">No, autism is a spectrum disorder, meaning symptoms vary widely from person to person.</p>
+        </div>
+
+        <div class="faq-box" onclick="toggleAnswer('q10')">
+            <h2>10. Can adults have autism?</h2>
+            <p id="q10" class="answer">Yes, many adults are diagnosed later in life after recognizing their symptoms.</p>
+        </div>
+
+        <div class="faq-box" onclick="toggleAnswer('q11')">
+            <h2>11. What is the difference between autism and Asperger’s syndrome?</h2>
+            <p id="q11" class="answer">Asperger’s is a milder form of autism with fewer language difficulties and higher cognitive abilities.</p>
+        </div>
+
+        <div class="faq-box" onclick="toggleAnswer('q12')">
+            <h2>12. Can children with autism make friends?</h2>
+            <p id="q12" class="answer">Yes, but they may need guidance and support to develop social skills.</p>
+        </div>
+
+        <div class="faq-box" onclick="toggleAnswer('q13')">
+            <h2>13. Does autism affect intelligence?</h2>
+            <p id="q13" class="answer">Autism affects individuals differently; some may have intellectual disabilities, while others have above-average intelligence.</p>
+        </div>
+
+        <div class="faq-box" onclick="toggleAnswer('q14')">
+            <h2>14. Can diet affect autism symptoms?</h2>
+            <p id="q14" class="answer">Some parents report improvements with special diets, but scientific evidence is still limited.</p>
+        </div>
+
+        <div class="faq-box" onclick="toggleAnswer('q15')">
+            <h2>15. How can I support a child with autism?</h2>
+            <p id="q15" class="answer">Providing patience, structure, and access to therapy can greatly support a child with autism.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
