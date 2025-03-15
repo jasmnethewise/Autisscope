@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autism Assessment Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            border-radius: 10px;
+            width: 50%;
+            margin: auto;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+        }
+        h2 {
+            font-size: 2.5rem;
+        }
+        .score {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .low {
+            color: #2ecc71;
+        }
+        .moderate {
+            color: #f1c40f;
+        }
+        .high {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Autism Assessment Result</h2>
+        <p>Your child's autism score:</p>
+        <p id="score" class="score"></p>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        let score = localStorage.getItem("autismScore") || 0;
+        let scoreElement = document.getElementById("score");
+        let messageElement = document.getElementById("message");
+
+        scoreElement.textContent = score;
+
+        if (score < 10) {
+            messageElement.textContent = "Low probability of autism.";
+            scoreElement.classList.add("low");
+        } else if (score >= 10 && score <= 25) {
+            messageElement.textContent = "Moderate probability of autism. Consult a specialist.";
+            scoreElement.classList.add("moderate");
+        } else {
+            messageElement.textContent = "High probability of autism. Seek professional evaluation.";
+            scoreElement.classList.add("high");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autism Assessment - Part 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            width: 60%;
+            margin: auto;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        h2 {
+            font-size: 2rem;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            background: white;
+            color: black;
+            font-size: 1rem;
+        }
+        button {
+            background: #ff4757;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #e84118;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Autism Assessment - Part 2</h2>
+        <form id="form2">
+            <p>11. Does your child struggle with understanding jokes or sarcasm?</p>
+            <select name="q11">
+                <option value="2">Always</option>
+                <option value="1">Sometimes</option>
+                <option value="0">Never</option>
+            </select>
+
+            <p>12. Does your child dislike loud noises or bright lights?</p>
+            <select name="q12">
+                <option value="2">Always</option>
+                <option value="1">Sometimes</option>
+                <option value="0">Never</option>
+            </select>
+
+            <p>13. Does your child have difficulty expressing their needs?</p>
+            <select name="q13">
+                <option value="2">Always</option>
+                <option value="1">Sometimes</option>
+                <option value="0">Never</option>
+            </select>
+
+            <p>14. Does your child engage in repetitive hand movements?</p>
+            <select name="q14">
+                <option value="2">Always</option>
+                <option value="1">Sometimes</option>
+                <option value="0">Never</option>
+            </select>
+
+            <p>15. Does your child prefer playing alone rather than with others?</p>
+            <select name="q15">
+                <option value="2">Always</option>
+                <option value="1">Sometimes</option>
+                <option value="0">Never</option>
+            </select>
+
+            <p>16. Does your child resist physical affection?</p>
+            <select name="q16">
+                <option value="2">Always</option>
+                <option value="1">Sometimes</option>
+                <option value="0">Never</option>
+            </select>
+
+            <p>17. Does your child show unusual attachment to objects?</p>
+            <select name="q17">
+                <option value="2">Always</option>
+                <option value="1">Sometimes</option>
+                <option value="0">Never</option>
+            </select>
+
+            <p>18. Does your child struggle with following multi-step instructions?</p>
+            <select name="q18">
+                <option value="2">Always</option>
+                <option value="1">Sometimes</option>
+                <option value="0">Never</option>
+            </select>
+
+            <p>19. Does your child have difficulty controlling their emotions?</p>
+            <select name="q19">
+                <option value="2">Always</option>
+                <option value="1">Sometimes</option>
+                <option value="0">Never</option>
+            </select>
+
+            <p>20. Does your child engage in unusual speech patterns?</p>
+            <select name="q20">
+                <option value="2">Always</option>
+                <option value="1">Sometimes</option>
+                <option value="0">Never</option>
+            </select>
+
+            <button type="button" onclick="calculateAutismScore()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function calculateAutismScore() {
+            let formData = new FormData(document.getElementById("form2"));
+            let answers = JSON.parse(localStorage.getItem("assessment1")) || {};
+            let totalScore = 0;
+
+            formData.forEach((value, key) => {
+                answers[key] = parseInt(value);
+                totalScore += parseInt(value);
+            });
+
+            localStorage.setItem("assessment2", JSON.stringify(answers));
+            localStorage.setItem("autismScore", totalScore);
+
+            window.location.href = "result.html";
+        }
+    </script>
+</body>
+</html>
+
