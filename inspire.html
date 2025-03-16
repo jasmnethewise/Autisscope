@@ -9,49 +9,68 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f5f5f5;
         }
-        
+
         .container {
             width: 80%;
             margin: 40px auto;
             text-align: center;
         }
-        
+
         h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #333;
         }
-        
-        img {
-            width: 100%;
-            height: auto;
+
+        .story {
+            background-color: white;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
             margin-bottom: 20px;
+            text-align: left;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
         }
-        
-        p {
-            font-size: 18px;
-            margin-bottom: 20px;
+
+        .story:hover {
+            transform: scale(1.02);
+            border-color: #007BFF;
+        }
+
+        .story h2 {
+            font-size: 22px;
+            color: #007BFF;
+            margin-bottom: 10px;
+        }
+
+        .story p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
             text-align: justify;
-        }
-        
-        hr {
-            border: none;
-            height: 1px;
-            background-color: #ccc;
-            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Success Stories</h1>
-        <img src="https://drive.google.com/uc?id=1Bg3I3o5mHVCMwezXgL57ZEmfTv6T4WuA" alt="Temple Grandin">
-        <p>Temple Grandin is one of the most inspiring figures—not just because she’s a brilliant animal scientist, but because she turned her challenges into strengths. When she was a child, she was diagnosed with autism at a time when people didn’t understand it well, and many assumed she wouldn’t be able to live a normal life. But she proved everyone wrong. From an early age, she had a unique way of thinking—she thought in pictures. Instead of relying on words like most people, she visualized the world in her mind with incredible detail, allowing her to notice things others overlooked. This ability gave her deep insight into animal behavior, which later helped her design innovative systems to reduce stress for livestock in farms and slaughterhouses. But that wasn’t her only invention! One of her most famous creations is the Hug Machine, which she originally designed to help herself. Since she was hypersensitive to touch, she found it difficult to accept hugs from people, yet she felt comforted by gentle pressure on her body. So, she built a simple device—a box with adjustable side cushions that apply pressure when activated, like a soothing hug. This invention didn’t just help her; it became an important therapeutic tool for autistic individuals, helping them reduce anxiety and improve sensory regulation. What’s truly remarkable about Temple’s story is that she never let challenges or societal expectations hold her back. Instead of trying to "fix" herself to fit in, she embraced her unique way of thinking and used it to make the world a better place.</p>
-        <hr>
-        <img src="https://drive.google.com/uc?id=1BbCSj3vWAtO2mhIkaLECrl6S-6ssadEJ" alt="Daniel Tammet">
-        <p>Daniel Tammet: The Genius with an Extraordinary Mind</p>
-        <p>Daniel Tammet is an exceptional individual in every sense. He has autism, but his incredible abilities have made him one of the most famous savants in the world. Born in 1979 in Britain, Tammet was diagnosed with Asperger’s Syndrome, a condition on the autism spectrum. From childhood, Daniel showed a remarkable talent for numbers and languages. He can perform complex calculations in seconds without any tools. In 2004, he set a world record by reciting 22,514 digits of the number π (pi) from memory in just five hours, an achievement that amazed the world. But Daniel’s genius is not limited to mathematics. He speaks more than ten languages, including English, French, German, Spanish, and even Icelandic, which he learned in just one week! What makes Daniel truly extraordinary is that he doesn’t see numbers as mere digits; instead, he perceives them as patterns, colors, and shapes. This unique way of processing information is known as synesthesia. Despite the challenges of autism, Daniel never allowed it to hold him back. He wrote a book titled "Born on a Blue Day", where he shares his incredible life story and helps change the way the world views autism. He proved that autism is not a limitation but a unique way of experiencing the world. Today, Daniel is a respected author and speaker, inspiring thousands of people with his story. He is a living example that being different is not a weakness—it is a powerful gift.</p>
+
+        <div class="story">
+            <h2>Temple Grandin: Turning Challenges into Strengths</h2>
+            <p>Temple Grandin is one of the most inspiring figures—not just because she’s a brilliant animal scientist, but because she turned her challenges into strengths. When she was a child, she was diagnosed with autism at a time when people didn’t understand it well, and many assumed she wouldn’t be able to live a normal life. But she proved everyone wrong.</p>
+            <p>Instead of relying on words like most people, she visualized the world in her mind with incredible detail, allowing her to notice things others overlooked. This ability gave her deep insight into animal behavior, which later helped her design innovative systems to reduce stress for livestock in farms.</p>
+            <p>She also created the "Hug Machine"—a therapeutic tool that helps autistic individuals regulate their sensory experiences. Temple Grandin’s story teaches us that embracing uniqueness can lead to remarkable achievements.</p>
+        </div>
+
+        <div class="story">
+            <h2>Daniel Tammet: The Genius with an Extraordinary Mind</h2>
+            <p>Daniel Tammet is an exceptional individual in every sense. Born in 1979 in Britain, he was diagnosed with Asperger’s Syndrome. From childhood, Daniel showed a remarkable talent for numbers and languages.</p>
+            <p>In 2004, he set a world record by reciting 22,514 digits of π (pi) from memory in just five hours. He speaks more than ten languages, including Icelandic, which he learned in just one week!</p>
+            <p>Daniel perceives numbers as patterns, colors, and shapes, a condition known as synesthesia. His book, "Born on a Blue Day," shares his incredible life story, proving that autism is not a limitation but a unique way of experiencing the world.</p>
+        </div>
     </div>
 </body>
 </html>
-```
